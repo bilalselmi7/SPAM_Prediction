@@ -1,0 +1,85 @@
+<html>
+    <head>
+
+        <style>
+            
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            button {
+                background-color: rgb(13, 0, 44);
+                color: rgb(255, 255, 255);
+                padding: 13px 26px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #252242;
+                color: white;
+            }
+
+
+        </style>
+    </head>
+
+    {% if data == "0" %}
+        <head>
+            <style>
+                body {
+                    text-align: center;
+                    background-color: rgb(61, 122, 0);
+                }
+
+                h1 {
+                    color: rgb(0, 0, 0);
+                }
+            </style>
+        </head>
+        <body>
+                <br></br>
+                <h1> This mail is not a SPAM ! </h1>
+                <br></br>
+                <img src = "static\isnotspam.jpg" width = "1000px" height = "500px">
+
+        </body>
+    {% endif %}
+
+    {% if data == "1" %}
+        <head>
+            <style>
+                body {
+                    text-align: center;
+                    background-color: rgb(121, 0, 0);
+                }
+
+
+                h1 {
+                    color: rgb(172, 163, 163);
+                }
+            </style>
+        </head>
+        <body>
+                <br></br>
+                <h1> Be Careful, This mail is a SPAM ! </h1>
+                <img src = "static\isspam.jpg" width = "1000px" height = "500px">
+        </body>
+    {% endif %}
+
+    <body>
+        <br></br>
+        <br></br>
+        <a href = "/">
+            <button> Go back to home page </button>
+        </a>
+        <br></br>
+        <div id = "footer">
+            <p> Bilal SELMI -- Yanis FADILI </p>
+        </div>
+    </body>
+</html>
